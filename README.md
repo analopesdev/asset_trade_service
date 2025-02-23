@@ -37,7 +37,7 @@ Asset Trade Service is a Go-based application designed to facilitate the trading
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/asset_trade_service.git
+    git clone https://github.com/analopesdev/asset_trade_service.git
     cd asset_trade_service
     ```
 
