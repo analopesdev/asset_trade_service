@@ -49,6 +49,6 @@ func NewInvestorPosition(assetID string, shares int) *InvestorAssetPosition {
 	}
 }
 
-func (i *InvestorAssetPosition) AddShares(shares int) {
-	i.Shares += shares
+func (iap *InvestorAssetPosition) AddShares(qtd int) {
+	iap.Shares += qtd
 }
