@@ -5,7 +5,7 @@ Asset Trade Service is a Go-based application designed to facilitate the trading
 ## Project Structure
 
 ```
-/home/analopes/projects/asset_trade_service
+asset_trade_service
 ├── internal
 │   └── market
 │       └── entity
