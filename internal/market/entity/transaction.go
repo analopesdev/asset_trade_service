@@ -9,16 +9,26 @@ import (
 type Transaction struct {
 	ID           string
 	SellingOrder *Order
-	BuyOrder     *Order
+	BuyingOrder  *Order
 	Shares       int
 	Price        float64
 	Total        float64
-	Datetim      time.Time
+	Datetime     time.Time
 }
 
-func NewTransation(sellOrder *Order, buyOrder *Order, shares int, price float64, total float64) *Transaction {
+func NewTransation(sellingOrder *Order, buyingOrder *Order, shares int, price float64, total float64) *Transaction {
 	return &Transaction{
 		ID:           uuid.New().String(),
-		SellingOrder: sellOrder,
+		SellingOrder: sellingOrder,
+		BuyingOrder:  buyingOrder,
+		Shares:       shares,
+		Price:        price,
+		Total:        total,
+		Datetime:     time.Now(),
 	}
+}
+
+func (t *Transaction) Process() {
+	processor := NewOrderProcessor(t)
+	processor.Process()
 }
