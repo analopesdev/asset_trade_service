@@ -16,14 +16,14 @@ type Transaction struct {
 	Datetime     time.Time
 }
 
-func NewTransation(sellingOrder *Order, buyingOrder *Order, shares int, price float64, total float64) *Transaction {
+func NewTransation(sellingOrder *Order, buyingOrder *Order, shares int, price float64) *Transaction {
 	return &Transaction{
 		ID:           uuid.New().String(),
 		SellingOrder: sellingOrder,
 		BuyingOrder:  buyingOrder,
 		Shares:       shares,
 		Price:        price,
-		Total:        total,
+		Total:        0,
 		Datetime:     time.Now(),
 	}
 }
